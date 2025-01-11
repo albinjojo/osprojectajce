@@ -1,0 +1,346 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Light gray background */
+    color: #333; /* Dark gray text */
+    padding-top: 60px; /* Add padding to the top of the body */
+}
+
+header {
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    background-color: white; /* Change header background to white */
+    color: #333; /* Change header text color to dark gray */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd; /* Add a bottom border for visibility */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: black; /* Change link color to black */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: white; /* Hero section background */
+}
+
+.poster {
+    text-align: center;
+    padding: 5rem;
+    width: 90%; /* Set the width to 90% to cover more area */
+    margin: 0 auto; /* Center the poster section */
+}
+
+.poster img {
+    width: 100%; /* Make the poster responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.courses {
+    padding: 2rem;
+    background-color: white; /* Courses section background */
+    text-align: center;
+}
+
+.title {
+    font-weight: 600; /* Bold title */
+    color: rgb(31, 41, 55); /* Dark text color */
+}
+
+.description {
+    margin-top: 1rem; /* Space above description */
+    font-size: 0.875rem; /* Font size for description */
+    line-height: 1.25rem; /* Line height for readability */
+    color: rgb(75, 85, 99); /* Gray text color */
+}
+
+.description a {
+    color: rgb(59, 130, 246); /* Link color */
+}
+
+.description a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.actions {
+    display: flex; /* Flexbox for action buttons */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 1rem; /* Space above actions */
+}
+
+.pref {
+    font-size: 0.75rem; /* Font size for preferences button */
+    line-height: 1rem; /* Line height */
+    color: rgb(31, 41, 55); /* Dark text color */
+    text-decoration: underline; /* Underline text */
+    background-color: transparent; /* Transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s; /* Transition effect */
+    
+}
+
+.pref:hover {
+    color: rgb(156, 163, 175); /* Change color on hover */
+}
+
+.accept {
+    font-size: 0.75rem; /* Font size for learn button */
+    line-height: 1rem; /* Line height */
+    background-color: rgb(17, 24, 39); /* Dark background */
+    font-weight: 500; /* Medium font weight */
+    border-radius: 0.5rem; /* Rounded corners */
+    color: #fff; /* White text color */
+    padding: 0.625rem 1rem; /* Padding for button */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.15s; /* Transition effect */
+}
+
+.accept:hover {
+    background-color: rgb(55, 65, 81); /* Change background on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #9e9d9d; /* Footer background color */
+    color: rgb(208, 201, 201); /* Footer text color */
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.card {
+    display: block;
+    position: relative;
+    width: 90%; /* Set the width to 90% of the screen */
+    padding: 2em 1.2em; /* Padding for the card */
+    background-color: #ffffff; /* Change background to white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin: 12px auto; /* Center the card and add margin */
+    text-decoration: none; /* Remove underline */
+    z-index: 0; /* Ensure it is above other elements */
+    overflow: hidden; /* Hide overflow */
+    transition: transform 0.35s ease-out; /* Transition for hover effect */
+}
+
+.card:hover {
+    background-color: #e0f7fa; /* Light blue background on hover */
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    z-index: -1; /* Behind the card */
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #c4c9d0, #cacccf); /* Background gradient */
+    height: 32px;
+    width: 32px;
+    border-radius: 32px; /* Rounded corners */
+    transform: scale(1); /* Initial scale */
+    transform-origin: 50% 50%; /* Origin for scaling */
+    transition: transform 0.35s ease-out; /* Transition for scaling */
+}
+
+.card:hover:before {
+    transform: scale(28); /* Scale effect on hover */
+}
+
+.card-title {
+    color: #262626; /* Title color */
+    font-size: 1.5em; /* Title font size */
+    line-height: normal; /* Line height */
+    font-weight: 700; /* Bold title */
+    margin-bottom: 0.5em; /* Space below title */
+}
+
+
+.go-corner {
+    display: flex; /* Flexbox for positioning */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    position: absolute; /* Positioning */
+    width: 2em; /* Width */
+    height: 2em; /* Height */
+    overflow: hidden; /* Hide overflow */
+    top: 0; /* Align to top */
+    right: 0; /* Align to right */
+    background: linear-gradient(135deg, #6293c8, #384c6c); /* Background gradient */
+    border-radius: 0 4px 0 32px; /* Rounded corners */
+}
+
+
+.card.wallet {
+    width: 90%; /* Set the width to 90% of the screen */
+    height: auto; /* Allow height to adjust based on content */
+    background: #ffffff; /* White background */
+    border-top-right-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    position: relative; /* Positioning */
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04); /* Shadow effect */
+    transition: all 0.3s ease-out; /* Transition for hover effect */
+}
+
+.card.wallet:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0); /* Hover effect */
+    box-shadow: 0 24px 36px rgba(0, 0, 0, 0.11); /* Shadow on hover */
+}
+
+.overlay {
+    width: 118px;
+    position: absolute;
+    height: 118px;
+    border-radius: 50%;
+    background: rgba(206, 178, 252, 0.5); /* Light overlay */
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+.circle {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff; /* White background */
+    border: 2px solid #ceb2fc; /* Border color */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Positioning */
+    z-index: 1; /* Above the overlay */
+    transition: all 0.3s ease-out; /* Transition for hover effect */
+}
+
+
+.card p {
+    font-size: 17px; /* Font size for text */
+    color: #4c5656; /* Text color */
+    margin-top: 30px; /* Space above text */
+    z-index: 1000; /* Above other elements */
+    transition: color 0.3s ease-out; /* Transition for color change */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+}
+
+input[type="radio"] {
+    display: none; /* Hide radio buttons */
+}
+
+/* Animation for automatic slideshow */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+    34% { transform: translateX(-100%); }
+    67% { transform: translateX(-100%); }
+    68% { transform: translateX(-200%); }
+    100% { transform: translateX(-200%); }
+}
+
+/* Apply animation to the slides */
+.slides {
+    animation: slideAnimation 9s infinite; /* Adjust timing as needed */
+}
+
+.slide img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.details {
+    display: none; /* Hide details by default */
+}
+
+.card:target .details {
+    display: block; /* Show details when the card is targeted */
+}
+
+.header-circle {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background: rgba(206, 178, 252, 0.5); /* Violet color */
+    border-radius: 50%; /* Make it round */
+    top: 20px; /* Position it as needed */
+    left: 20px; /* Position it as needed */
+    z-index: -1; /* Behind the header content */
+}
+
+.footer-circle {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background: rgba(206, 178, 252, 0.5); /* Violet color */
+    border-radius: 50%; /* Make it round */
+    bottom: 20px; /* Position it as needed */
+    right: 20px; /* Position it as needed */
+    z-index: -1; /* Behind the footer content */
+}
+
+.card-circle {
+    position: absolute;
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    background: rgba(206, 178, 252, 0.5); /* Violet color */
+    border-radius: 50%; /* Make it round */
+    top: 20px; /* Position it as needed */
+    right: 20px; /* Position it as needed */
+    z-index: -1; /* Behind the card content */
+}
+
+.center-circle {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background: rgba(206, 178, 252, 0.5); /* Violet color */
+    border-radius: 50%; /* Make it round */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    z-index: -1; /* Behind the card content */
+} 
