@@ -343,4 +343,10 @@ input[type="radio"] {
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust position to center */
     z-index: -1; /* Behind the card content */
+}
+
+/* Disable hover effects for cards on pages with no-hover class */
+.no-hover .card.wallet:hover {
+    transform: none; /* Remove the hover transform effect */
+    box-shadow: none; /* Remove the hover shadow effect */
 } 
